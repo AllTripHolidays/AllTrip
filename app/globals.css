@@ -1,7 +1,8 @@
+@import 'lenis/dist/lenis.css';
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import 'lenis/dist/lenis.css';
+
 
 @layer base {
   :root {
