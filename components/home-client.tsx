@@ -2,26 +2,28 @@
 
 import React from "react"
 import HeroShowcase from "@/components/hero-showcase"
-import FeaturesSection from "@/components/features-section"
-import DestinationsSection from "@/components/destinations-section"
-import ItinerariesSection from "@/components/trips-section"
 import SocialImpactSection from "@/components/social-impact-section"
 import BookDetailsSection from "@/components/book-details-section"
-import TestimonialsSection from "@/components/testimonials-section"
-import StayRedirect from "@/components/stayredirect"
 import ScrollOverlapSection from "@/components/scroll-overlap-section"
+
+// lazy-load the larger landing sections so the initial bundle is smaller
+import {
+  LazyDestinationsSection,
+  LazyTripsSection,
+  LazyTestimonialsSection,
+  LazyBlogSection,
+} from "@/components/lazy-components";
 
 export default function HomeClient() {
   return (
     <>
       <HeroShowcase />
-      <FeaturesSection />
-      <DestinationsSection />
+      {/* load the heavier sections lazily so they don't contribute to the first bundle */}
+      <LazyDestinationsSection />
       <SocialImpactSection />
-      <ItinerariesSection />
+      <LazyTripsSection />
       <BookDetailsSection />
-      <StayRedirect />
-      <TestimonialsSection />
+      <LazyTestimonialsSection />
       <ScrollOverlapSection />
     </>
   )

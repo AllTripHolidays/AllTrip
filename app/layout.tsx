@@ -6,6 +6,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next"
 import { ThemeProvider } from "@/components/theme-provider"
 import Navbar from "@/components/navbar"
 import Footer from "@/components/footer"
+import Chatbot from "@/components/chatbot"
 import { Analytics } from "@vercel/analytics/react"
 import ClientPerformance from "@/components/client-performance"
 import LenisProvider from "@/components/lenis-provider"
@@ -133,6 +134,7 @@ export default function RootLayout({
             {/* Main content without top padding since navbar is not fixed */}
             <main id="main-content" role="main" className="m-0 p-0">{children}</main>
             <Footer />
+            <Chatbot />
           </LenisProvider>
         </ThemeProvider>
         <Analytics />

@@ -69,10 +69,10 @@ const Navbar: React.FC = () => {
         {/* Header Actions */}
         <div className="flex items-center gap-5">
           <Link
-            href="/checkout"
+            href="/plan-trip"
             className="px-8 py-3 bg-slate-900 text-white rounded-full font-semibold text-sm hover:bg-slate-800 transition"
           >
-            Book Trip
+            Plan your trip
           </Link>
 
           {/* Mobile Menu Button */}
@@ -100,11 +100,11 @@ const Navbar: React.FC = () => {
                   </Link>
                 ))}
                 <Link
-                  href="/checkout"
+                  href="/plan-trip"
                   onClick={() => setIsDrawerOpen(false)}
                   className="mt-4 px-8 py-3 bg-slate-900 text-white rounded-full font-semibold text-center"
                 >
-                  Book Trip
+                  Plan your trip
                 </Link>
               </div>
               <DrawerClose />

@@ -90,7 +90,7 @@ export default function Footer() {
                 <li><Link href="#about" className="hover:text-white">About</Link></li>
                 <li><Link href="#destinations" className="hover:text-white">Destinations</Link></li>
                 <li><Link href="#trips" className="hover:text-white">Trips</Link></li>
-                <li><Link href="#campus" className="hover:text-white">Campus Ambassador</Link></li>
+                <li><Link href="/campus" className="hover:text-white">Campus Ambassador</Link></li>
                 <li><Link href="/policies" className="hover:text-white">Policies</Link></li>
                 <li><Link href="/terms" className="hover:text-white">Terms</Link></li>
                 <li><Link href="/privacy" className="hover:text-white">Privacy</Link></li>

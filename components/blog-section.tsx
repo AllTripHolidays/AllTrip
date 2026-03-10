@@ -1,7 +1,5 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { fadeInUp, staggerContainer } from "@/lib/motion";
 import Image from "next/image";
 import { getBlurData } from "@/lib/blur-data";
 import Link from "next/link";
@@ -65,9 +63,8 @@ const BlogSection: React.FC = () => {
 
   const blogCards = useMemo(() => {
     return blogs.slice(0, 3).map((post, index) => (
-      <motion.div
+      <div
         key={post.slug}
-        variants={fadeInUp}
         className="card-modern rounded-xl overflow-hidden focusable"
       >
         <div className="relative w-full h-56">
@@ -103,26 +100,20 @@ const BlogSection: React.FC = () => {
             </button>
           </div>
         </div>
-      </motion.div>
+      </div>
     ));
   }, [blogs, liked, handleLike]);
 
   return (
     <section className="px-6 py-20 max-w-7xl mx-auto bg-white dark:bg-[hsl(var(--surface-base))]">
-      <motion.div
-        className="flex flex-col md:flex-row items-start md:items-center justify-between mb-12 gap-4"
-        variants={staggerContainer(0.05,0.12)}
-        initial="initial"
-        whileInView="animate"
-        viewport={{ once: true, amount: 0.2 }}
-      >
-        <motion.div variants={fadeInUp}>
-          <h2 className="heading-display text-gray-900 dark:text-white">Tips & Articles</h2>
-          <p className="text-lg text-gray-600 dark:text-gray-400 mt-3 max-w-lg">
+      <div className="flex flex-col md:flex-row items-start md:items-center justify-between mb-12 gap-4">
+        <div>
+          <h2 style={{ color: '#111827' }} className="heading-display text-yellow-500 dark:text-yellow-300">Tips & Articles</h2>
+          <p className="text-lg text-yellow-600 dark:text-yellow-400 mt-3 max-w-lg">
             Get inspired by stories, tips, and curated travel experiences from around the world.
           </p>
-        </motion.div>
-        <motion.div variants={fadeInUp}>
+        </div>
+        <div>
           <Link href="/blog">
             <button
               type="button"
@@ -134,12 +125,12 @@ const BlogSection: React.FC = () => {
               View more
             </button>
           </Link>
-        </motion.div>
-      </motion.div>
+        </div>
+      </div>
 
-      <motion.div className="grid md:grid-cols-3 gap-10" variants={staggerContainer(0.1,0.15)} initial="initial" whileInView="animate" viewport={{ once: true, amount: 0.15 }}>
+      <div className="grid md:grid-cols-3 gap-10">
         {blogCards}
-      </motion.div>
+      </div>
     </section>
   );
 };

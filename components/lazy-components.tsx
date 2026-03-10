@@ -22,9 +22,7 @@ export const LazyBlogSection = dynamic(() => import('@/components/blog-section')
   loading: () => <div className="h-96 bg-gray-100 animate-pulse" />,
 });
 
-export const LazyEventSection = dynamic(() => import('@/components/event-section'), {
-  loading: () => <div className="h-96 bg-gray-100 animate-pulse" />,
-});
+
 
 export const LazyCampusAmbassadorSection = dynamic(() => import('@/components/campus-ambassador-section'), {
   loading: () => <div className="h-96 bg-gray-100 animate-pulse" />,

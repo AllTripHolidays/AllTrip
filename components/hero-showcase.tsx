@@ -105,12 +105,15 @@ export default function HeroShowcase() {
             ></div>
 
             {/* Know More */}
-            <div className="relative z-10 flex justify-between items-center font-bold text-lg cursor-pointer group">
+            <Link
+              href="/itineraries"
+              className="relative z-10 flex justify-between items-center font-bold text-lg cursor-pointer group"
+            >
               <span className="text-gray-50 tracking-wide">Know More</span>
               <span className="w-7 h-7 rounded-full bg-slate-900/85 text-yellow-400 flex items-center justify-center transition-transform group-hover:translate-x-1">
                 →
               </span>
-            </div>
+            </Link>
 
             {/* Places Preview */}
             <div className="relative z-10 flex items-center gap-4">
